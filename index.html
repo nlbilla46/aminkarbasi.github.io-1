@@ -1,435 +1,293 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>
-    About &ndash; IID
-</title>
-<meta name="author" content="IID" />
-<meta name="description" content="IID Website" />
-<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-<link rel="alternate" type="application/rss+xml" href="atom.xml" />
-<link rel="stylesheet" href="css/base.css" type="text/css" media="screen, projection" />
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-<link rel="icon" type="image/png" href="images/favicon.png">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#7BE4D5">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="application-name" content="Javid's blog">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Javid's blog">
-<link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192x192.png">
-<meta name="msapplication-TileImage" content="images/manifest/icon-192x192.png">
-<meta name="msapplication-TileColor" content="#7BE4D5">
-<meta name="msapplication-tap-highlight" content="no">
-<meta name="twitter:card" content="IID Website">
-<meta name="twitter:site" content="@notwaldorf">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="my-app">
-<meta property="og:image" content="icons/icon-192x192.png" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-#extreme
-    {
-    z-index: 1;
-    visibility: hidden;
-    position: absolute;
-    z-index: 10000;
-    max-width:0rem;
+  <meta charset="utf-8">
+  <title>Amin Karbasi</title>
+  <meta name="author" content="Amin Karbasi" />
+  <meta name="description" content="Personal homepage of Amin Karbasi." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111317;
+      --muted: #4b5563;
+      --accent: #0f766e;
+      --accent-soft: #c7f1eb;
+      --paper: #f5f2ee;
+      --panel: #ffffff;
+      --shadow: rgba(17, 19, 23, 0.08);
+      --line: rgba(17, 19, 23, 0.12);
     }
-</style>
 
+    * { box-sizing: border-box; }
 
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-47334320-2']);
-    _gaq.push(['_setDomainName', 'meowni.ca']);
-    _gaq.push(['_trackPageview']);
-    (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top, #ffffff 0%, #f0ece7 45%, #e9e3dc 100%);
+      line-height: 1.6;
+    }
 
-<script>
-  function toggleReview(el) {
-    const tr = el.parentElement.parentElement;
-    const nextTr = tr.nextElementSibling;
-    nextTr.classList.toggle('show');
-  }
-  function hideReview(el) {
-    const tr = el.parentElement.parentElement;
-    tr.classList.remove('show');
-  }
-  function copyReview(el) {
-    const tr = el.parentElement.parentElement;
-    const copyText = tr.querySelector('div').textContent;
-    navigator.clipboard.writeText(copyText);
-  }
-</script>
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 6vw 40px;
+      background: linear-gradient(120deg, rgba(15, 118, 110, 0.08), rgba(249, 250, 251, 0.5));
+    }
 
-<body>
+    header::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15, 118, 110, 0.2), transparent 70%);
+      z-index: 0;
+    }
 
-<nav>
-<ul>
-<li id="home_link" class="og"><a href="index.html">🏠</a></li>
-<li><a href="people.html">People</a></li>
-  <li><a href="pubs.html">Publications</a></li>
-<li><a href="talks.html">Talks</a></li>
-<li class="news"><a href="news.html">News</a></li>
+    nav {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      max-width: 1080px;
+      margin: 0 auto 72px;
+    }
 
-</ul>
-</nav>
-<div class="splash">
-<div class="splash-wrapper">
-<div class="splash-copy">
-<h1>Inference, Information, and Decision Systems Group</h1>
-<p>
-  Welcome to the I.I.D. group, led by Amin Karbasi.
-  The research in our group is at the intersection of learning theory, optimization, and information processing.
-  We develop data-driven algorithms, with strong theoretical guarantees, that can automatically acquire and reason about highly uncertain information.
-  For more information, please visit our research directions.
-</p>
-</div>
-<div id="birbs">
-<canvas></canvas>
-<div class="birbs-legend">
-<b>click this art</b> to regenerate it
-</div>
-</div>
-</div>
-</div>
+    nav .name {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.02em;
+    }
 
-<div class="dots"></div>
-</div>
-<section class="content">
-<p>
-  <!--a href="https://extremetracking.com/open?login=javiddad" rel="me" title="Visitors" target="_blank">Visitors</a-->
-  <div id="extreme">
-  	<script src="https://efreecode.com/js.js" id="eXF-javiddad-0" async defer></script>
-  </div>
+    nav a {
+      color: var(--ink);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+    }
 
-  <div class="social-media-icons">
-    <a href="https://bsky.app/profile/aminkarbasi.bsky.social" target="_blank">
-      <img src="icons/Bluesky_Logo.png" alt="X" class="social-icon">
-    </a>
-    <a href="https://x.com/aminkarbasi" target="_blank">
-      <img src="icons/twitter.png" alt="X" class="social-icon">
-    </a>
-    <a href="https://www.linkedin.com/in/amin-karbasi-5025335/" target="_blank">
-      <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-    </a>
-    <a href="https://www.youtube.com/@Robust_Intelligence" target="_blank">
-      <img src="icons/youtube.png" alt="YouTube" class="social-icon">
-    </a>
-    <a href="https://scholar.google.com/citations?user=VusVB38AAAAJ&hl=en" target="_blank">
-      <img src="icons/scholar.png" alt="Google Scholar" class="social-icon">
-    </a>
-  </div>
-  <div id="extreme">
-    <script src="https://efreecode.com/js.js" id="eXF-javiddad-0" async defer></script>
-  </div>
+    nav a:hover { color: var(--accent); }
 
+    .hero {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+      align-items: center;
+    }
 
-<style>
-  p {
-    font-size: var(--font-size-s);
-  }
-  .content .listing.table li > a {
-    flex-shrink: 0;
-    flex-grow: 0;
-    width: 40%;
-  }
-  .content .listing.table li > div {
-    flex-grow: 1;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-left: var(--spacing-xs);
-  }
-  .content .listing.table li > div:before {
-    content: '→ ';
-    font-weight:bold;
-  }
-  @media screen and (max-width:600px) {
-    .content .listing.table li {
+    .hero-intro {
+      text-align: left;
+      justify-self: start;
+    }
+
+    .hero-card {
+      justify-self: end;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: clamp(2.3rem, 3.5vw, 3.5rem);
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin: 0 0 22px;
+      font-size: 1.05rem;
+    }
+
+    .hero .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 12px 24px rgba(15, 118, 110, 0.2);
+    }
+
+    .hero-card {
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 24px 48px var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .headshot {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-soft);
+      margin-bottom: 16px;
+    }
+
+    .hero-card h2 {
+      margin: 0 0 14px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hero-card li {
+      margin-bottom: 10px;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 8px auto 80px;
+      padding: 0 6vw;
+      display: grid;
+      gap: 32px;
+    }
+
+    .section {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 36px var(--shadow);
+      text-align: left;
+    }
+
+    .hero-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 6vw;
+    }
+
+    .section h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", "Times New Roman", serif;
+      font-size: 1.5rem;
+    }
+
+    .tags {
+      display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      margin-bottom: var(--spacing-m);
+      gap: 10px;
+      margin-top: 12px;
     }
-    .content .listing.table li > div {
-      margin-left: 0;
+
+    .tag {
+      background: var(--accent-soft);
+      color: #0b3b36;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
     }
-    .content .listing.table li > a {
-      width: 100% !important;
-      flex-shrink: 0;
+
+    .list {
+      display: grid;
+      gap: 16px;
     }
-  }
-</style>
 
-<style>
-table {
-  display: grid;
-  border-collapse: collapse;
-  gap: 4px;
-  max-width: 100%;
-  overflow: scroll;
-}
-table.small {
-  grid-template-columns: 1fr 8fr;
-}
-table.research {
-  grid-template-columns: 0.2fr 10fr;
-}
+    .list-item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fafafa;
+    }
 
-table.all {
-  grid-template-columns: 2.5fr 2fr 1fr 1fr;
-}
+    .list-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
-table.education {
-  grid-template-columns: 0.1fr 0.5fr 1.2fr 1.7fr 0.7fr;
-}
+    footer {
+      text-align: center;
+      padding: 36px 6vw 60px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
-table.awards {
-  grid-template-columns: 0.1fr 0.5fr 0.5fr 1.2fr;
-}
+    @media (max-width: 720px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      nav a { margin-left: 0; margin-right: 12px; }
+      .hero { gap: 32px; }
+      main { margin-top: -20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav></nav>
 
-thead,
-tbody,
-tr {
-  display: contents;
-}
+    <div class="hero-wrap">
+      <section class="hero">
+        <div class="hero-intro">
+          <h1>Amin Karbasi</h1>
+          <p>
+            Email: <a href="mailto:amin.karbasi@gmail.com">amin.karbasi@gmail.com</a><br>
+            Twitter: <a href="https://x.com/aminkarbasi">@aminkarbasi</a><br>
+            Google Scholar: <a href="https://scholar.google.com/citations?user=VusVB38AAAAJ&hl=en">Profile</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/amin-karbasi-5025335">Profile</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <img class="headshot" src="images/amin.jpeg" alt="Amin Karbasi headshot">
+          <h2>Quick facts</h2>
+          <ul>
+            <li>Senior Director of Cisco Foundation AI</li>
+            <li>Adjunct Professor at Stanford</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </header>
 
-th,
-td {
-  font-size: 14px;
-}
-td.small {
-  font-size: 14px;
-}
-td.center {
-  text-align: center;
-}
-th {
-  border-bottom: 3px solid black;
-  text-align: left;
-  font-size: 16px;
-}
-table.all td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-td a:link, td a:visited {
-  color: black;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: .125em;
-}
-tr.full {
-  display: none;
-}
-tr.full.show {
-  display: contents;
-}
-tr.full td {
-  grid-column: 1 / -1;
-  padding: 20px 40px;
-  border-left: 3px solid #ddd;
-  font-size: 16px;
-  line-height: 1.5;
-}
-button {
-  background: transparent;
-  font-family: inherit;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 2px solid var(--red);
-  color: black;
-}
-tr.full td button {
-  margin-right: 24px;
-}
-@media screen and (max-width:600px) {
-  table.all {
-    grid-template-columns: 1fr 1fr 0.5fr 0.7fr;
-  }
-  tr.full td {
-    max-width: 80%;
-    padding: 16px;
-  }
-}
+  <main>
+    <section id="about" class="section">
+      <h3>About</h3>
+      <p>
+        An academic entrepreneur, Amin Karbasi is a Senior Director at Cisco Foundation AI and serves on the
+        scientific board of the Simons Institute for the Theory of Computing.
+        Previously, he served as Chief Scientist at Robust Intelligence (acquired by Cisco in 2024). Before
+        that, he was a professor at Yale University and a research staff scientist at Google. He has received
+        the National Science Foundation (NSF) CAREER Award, Office of Naval Research (ONR) Young Investigator
+        Award, Air Force Office of Scientific Research (AFOSR) Young Investigator Award, DARPA Young Faculty
+        Award, National Academy of Engineering Grainger Award, Amazon Research Award, Nokia Bell-Labs Award,
+        Google Faculty Research Award, Microsoft Azure Research Award, Yale innovation award, Simons Research
+        Fellowship, and ETH Research Fellowship. His work has also been recognized with paper awards from
+        Graphs in Biomedical Image Analysis (GRAIL), Medical Image Computing and Computer Assisted
+        Interventions Conference (MICCAI), International Conference on Artificial Intelligence and Statistics
+        (AISTATS), IEEE ComSoc Data Storage, International Conference on Acoustics, Speech, and Signal
+        Processing (ICASSP), ACM SIGMETRICS, and IEEE International Symposium on Information Theory (ISIT).
+        His Ph.D. thesis received the Patrick Denantes Memorial Prize from the School of Computer and
+        Communication Sciences at EPFL, Switzerland.
+      </p>
+    </section>
 
-</style>
-<script>
-  function toggleReview(el) {
-    const tr = el.parentElement.parentElement;
-    const nextTr = tr.nextElementSibling;
-    nextTr.classList.toggle('show');
-  }
-  function hideReview(el) {
-    const tr = el.parentElement.parentElement;
-    tr.classList.remove('show');
-  }
-  function copyReview(el) {
-    const tr = el.parentElement.parentElement;
-    const copyText = tr.querySelector('div').textContent;
-    navigator.clipboard.writeText(copyText);
-  }
-</script>
+  </main>
 
-
-</table>
-
-
-<style>
-table {
-  display: grid;
-  border-collapse: collapse;
-  gap: 4px;
-  max-width: 100%;
-  overflow: scroll;
-}
-table.small {
-  grid-template-columns: 1fr 8fr;
-}
-table.all {
-  grid-template-columns: 1.5fr 1fr 1.5fr .5fr;
-}
-
-thead,
-tbody,
-tr {
-  display: contents;
-}
-
-th,
-td {
-  font-size: 14px;
-}
-td.small {
-  font-size: 14px;
-}
-td.center {
-  text-align: center;
-}
-th {
-  border-bottom: 3px solid black;
-  text-align: left;
-  font-size: 16px;
-}
-table.all td {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-td a:link, td a:visited {
-  color: black;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: .125em;
-}
-tr.full {
-  display: none;
-}
-tr.full.show {
-  display: contents;
-}
-tr.full td {
-  grid-column: 1 / -1;
-  padding: 20px 40px;
-  border-left: 3px solid #ddd;
-  font-size: 16px;
-  line-height: 1.5;
-}
-button {
-  background: transparent;
-  font-family: inherit;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 2px solid var(--red);
-  color: black;
-}
-tr.full td button {
-  margin-right: 24px;
-}
-@media screen and (max-width:600px) {
-  table.all {
-    grid-template-columns: 0.8fr 0.5fr 0.5fr 1.9fr 0.5fr;
-  }
-  tr.full td {
-    max-width: 80%;
-    padding: 16px;
-  }
-}
-
-</style>
-
-
-<h2>Selected Projects</h2>
-
-<p>
-
-</p>
-<div class="selected-projects">
-  <p>
-    <!--img src="church/51/church-doors.gif" alt="Church Doors" class="left-image" id="text-image-left"-->
-    Our group focuses on advancing machine learning systems to address critical challenges in their real-world deployment, such as noise, malicious exploitation, outliers, variability in objectives, <b>privacy concerns</b>, and <b>fairness</b>.
-    <img src="figs/iid.gif" alt="Church Doors" class="right-image" id="text-image-right">
-
-    Recognizing the gap between theoretical breakthroughs and practical limitations, we strive to develop robust algorithms that scale beyond the sterile lab environment.
-    This involves reexamining current methods under imperfect, real-world conditions and optimizing them to be adaptive and resilient.
-     We also explore online learning in complex environments, focusing on scenarios with <b>convex</b> and <b>submodular utility functions</b> and varying levels of information, to model and optimize dynamic, evolving systems.
-</p>
-<p>
-  <img src="figs/non_convex_optimization.gif" alt="Church Doors" class="right-image" id="text-image">
-    In addition to foundational machine learning, our research spans several key areas. We leverage advanced neuroimaging techniques, such as <b>functional MRI</b>, to study brain function and its link to behavior, creating data-driven machine learning tools to analyze spatially and temporally complex data.
-    We also tackle combinatorial optimization problems, designing scalable algorithms for discrete decision-making tasks across diverse domains.
-    Furthermore, we emphasize interactive decision-making systems, developing adaptive algorithms for human-in-the-loop scenarios like <b>recommender systems</b>. Our proprietary Robust Intelligence platform strengthens AI applications by exposing vulnerabilities through algorithmic red teaming, threat intelligence, and policy mappings, ensuring continuous improvement of AI validation and protection technologies.
-
-</p>
-</p>
-</div>
-
-<h2>News</h2>
-<div class="news">
-    <ul id="ul">
-        <li>--<em>Robust Intelligence</em> is excited to announce Cisco's intent to acquire us to enhance AI security for enterprises (Aug 2024).</li>
-        <li>— <em>Javid Dadashkarimi</em> Graduated (Jul. 28, 2023).</li>
-        <li>— <em>Qinghao Liang</em> won best paper award at on <a href="https://grail-miccai.github.io/grail2022/">GRAIL</a> (Sep. 18, 2022).</li>
-        <li>— <em>Jane</em> received Graduate Fellowship for STEM diversity from NSA.</li>
-        <li>— <em>Amin Karbasi</em> wins Bell Labs Prize for Brain Mapping Technology.</li>
-        <li>— <em>Chris Harshaw</em> Graduated (Dec. 2021).</li>
-        <li class="news"><a href="news.html">Continue</a></li>
-
-    </ul>
-</div>
-
-<hr>
-
-</section>
-<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/birds.js"></script>
+  <footer>
+    &copy; 2025 Amin Karbasi. All rights reserved.
+  </footer>
 </body>
-<script>
-  'use strict';
-
-  // Load the pygments stylesheet so that it's not render blocking.
-  var head = document.head;
-  var link = document.createElement('link');
-  link.type = 'text/css';
-  link.rel = 'stylesheet';
-  link.href = '/css/pygments.css'
-  head.appendChild(link);
-</script>
-
-<a href="https://extremetracking.com/free?login=karbasi" target="_blank" id="eXTReMe-Free-karbasi" title="eXTReMe Tracker - Free Website Statistics"><img src="data:image/gif;base64,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" style="border:0;border-radius:4px;height:38px;width:41px;" alt="eXTReMe Tracker - Free Website Statistics"></a>
 </html>
